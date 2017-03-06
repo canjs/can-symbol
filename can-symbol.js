@@ -46,27 +46,32 @@ if(typeof Symbol !== "undefined") {
 	"isMapLike",
 	"isListLike",
 	"isValueLike",
-	"isFunctionLike",
 	// ======= Shape detection =========
-	"getOwnKeyName",
-	"getKeyDescriptor",
-	"getValueDescriptor",
+	"getOwnKeys",
+	"getOwnKeyDescriptor",
+	// "getValueDescriptor",
 	"proto",
+	//optional
+	"getOwnEnumerableKeys",
+	"hasOwnKey",
 	// ======= GET / SET
 	"getValue",
 	"setValue",
 	"getKeyValue",
 	"setKeyValue",
 	// ======= Call =========
-	"call",
 	"apply",
+	"new",
 	// ======= Observe =========
 	"onValue",
 	"offValue",
 	"onKeyValue",
 	"offKeyValue",
-	"keyDependencies",
-	"valueDependencies"
+	"getKeyDependencies",
+	"getValueDependencies",
+	"onKeys",
+	"onKeysAdded",
+	"onKeysRemoved"
 	].forEach(function(name){
 	CanSymbol.for("can."+name);
 });
