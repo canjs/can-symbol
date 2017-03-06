@@ -1,7 +1,10 @@
 # can-symbol
 
 
-A symbol polyfill that also includes additional well known symbols used to detail how to operate on different objects.
+A symbol polyfill that also includes additional well known symbols used to detail how to
+operate on different objects.
+
+The following are the additional well-known symbols:
 
 - `can.apply(context, args)` - How to call this value as a function
 - `can.getKeyDependencies(key)->Map<value,[key]>` - Returns observable dependencies for the observable key.
@@ -30,3 +33,37 @@ A symbol polyfill that also includes additional well known symbols used to detai
 - `can.proto()` - Get the next object in the proto chain.  (PENDING)
 - `can.setKeyValue(key, value)` - Set a key's value.
 - `can.setValue(value)` - Update the value of this value.
+
+## Use
+
+```js
+var canSymbol = require("can-symbol");
+
+// Create a symbol --------------------------
+var someSymbol = canSymbol("this is my symbol");
+
+
+// Set a symbol 'property' ------------------
+// Assign it to an object as follows if you need to support
+// browsers that don't have native Symbols:
+var obj = {};
+Object.defineProperty(obj, someSymbol,{
+	enumerable: false,
+	writable: true,
+	configurable: true,
+	value: "Hi There!"
+});
+
+// ... or use  can-operate
+var canOperate = require("can-operate");
+canOperate.setKeyValue(obj, someSymbol, "Hi There!");
+
+// Read a symbol 'property' ----------------
+console.log( obj[someSymbol] ) //-> logs "Hi There!"
+
+
+// Define behavior for can-operate ----------------
+canOperate.setKeyValue(Set.prototype, canSymbol.for("can.getOwnEnumerableKeys"), function(){
+	return this.keys();
+});
+```
