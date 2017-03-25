@@ -69,6 +69,8 @@ if(typeof Symbol !== "undefined") {
 	"offKeyValue",
 	"getKeyDependencies",
 	"getValueDependencies",
+	"keyHasDependencies",
+	"valueHasDependencies",
 	"onKeys",
 	"onKeysAdded",
 	"onKeysRemoved"

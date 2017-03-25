@@ -7,14 +7,17 @@ operate on different objects.
 The following are the additional well-known symbols:
 
 - `can.apply(context, args)` - How to call this value as a function
-- `can.getKeyDependencies(key)->Map<value,[key]>` - Returns observable dependencies for the observable key.
+- `can.getKeyDependencies(key)->?` - Returns observable dependencies for the observable key, null if there are none.
 - `can.getKeyDescriptor(key)->{}` - Returns data describing this key's behavior. (PENDING)
 - `can.getKeyValue(key)->*` - Returns the value at key.
 - `can.getOwnEnumerableKeys()->Array|Iterator` - Returns enumerable keys directly on object.
 - `can.getOwnKeyDescriptor(key)->{}` - Returns data describing this key's behavior directly on object.
 - `can.getOwnKeys()->Array|Iterator` - Returns all keys directly on object.
 - `can.getValue()->*` - Returns the internal value of the object.
+- `can.getValueDependencies()->?` - Returns observable dependencies for the observable value, null if there are none.
 - `can.getValueDescriptor()->{}` - Returns data describing this values behavior.
+
+
 - `can.hasOwnKey(key)->Boolean` - Returns if the object has key.  Like `Object.prototype.hasOwnProperty`.
 - `can.isListLike {Boolean}` - If something should be list like
 - `can.isMapLike {Boolean}` - If something should be considered map like.
@@ -30,10 +33,12 @@ The following are the additional well-known symbols:
 - `can.onKeysAdded( callback(keyToValues[, index]) )` - Listen to when keys are added to this value.
 - `can.onKeysRemoved( callback(keysOrValues[, index]) )` - Listen to when keys are removed from this value.
 - `can.onValue(callback)` - Listen to when the value changes.
-- `can.proto()` - Get the next object in the proto chain.  (PENDING)
+- `can.getProto()` - Get the next object in the proto chain.  (PENDING)
 - `can.setKeyValue(key, value)` - Set a key's value.
 - `can.setValue(value)` - Update the value of this value.
 
+- `can.keyHasDependencies()-> Boolean`
+- `can.valueHasDependencies() -> Boolean`
 ## Use
 
 ```js
