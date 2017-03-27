@@ -60,15 +60,15 @@ Object.defineProperty(obj, someSymbol,{
 });
 
 // ... or use  can-operate
-var canOperate = require("can-operate");
-canOperate.setKeyValue(obj, someSymbol, "Hi There!");
+var canReflect = require("can-reflect");
+canReflect.set(obj, someSymbol, "Hi There!");
 
 // Read a symbol 'property' ----------------
 console.log( obj[someSymbol] ) //-> logs "Hi There!"
 
 
 // Define behavior for can-operate ----------------
-canOperate.setKeyValue(Set.prototype, canSymbol.for("can.getOwnEnumerableKeys"), function(){
+canReflect.set(Set.prototype, canSymbol.for("can.getOwnEnumerableKeys"), function(){
 	return this.keys();
 });
 ```
