@@ -14,7 +14,6 @@
   },
   "scripts": {
     "preversion": "npm test",
-    "version": "git commit -am \"Update version number\"",
     "postpublish": "git push --tags && git push",
     "testee": "testee test.html --browsers firefox",
     "test": "npm run jshint && npm run testee",
