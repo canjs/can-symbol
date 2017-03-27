@@ -1,6 +1,6 @@
 {
   "name": "can-symbol",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Well known symbols used to detail how to operate on different objects",
   "homepage": "http://canjs.com",
   "repository": {
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "preversion": "npm test",
-	"version": "git commit -am \"Update version number\"",
+    "version": "git commit -am \"Update version number\"",
     "postpublish": "git push --tags && git push",
     "testee": "testee test.html --browsers firefox",
     "test": "npm run jshint && npm run testee",
