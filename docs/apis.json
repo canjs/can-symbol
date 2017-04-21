@@ -21,12 +21,10 @@
 			"can-symbol/symbols/setKeyValue"
 		]},
 		{"can-symbol/symbols/call": [
-			// ======= Call =========
 			"can-symbol/symbols/apply",
 			"can-symbol/symbols/new"
 		]},
 		{"can-symbol/symbols/observe": [
-			// ======= Observe =========
 			"can-symbol/symbols/onValue",
 			"can-symbol/symbols/offValue",
 			"can-symbol/symbols/onKeyValue",
