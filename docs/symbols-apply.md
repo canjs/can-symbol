@@ -1,11 +1,27 @@
-@property {Symbol, Function} can-symbol/symbols/apply can.apply
+@typedef {function(Object, ArrayLike)} can-symbol/symbols/apply can.apply
 @parent can-symbol/symbols/call
-@description A symbol placed on an callable object to reference a function that applies a List-like as arguments to a call of the function.
+@description How to apply a List-like as the arguments to a call of the function.
 
-@signature `Example` `obj[canSymbol('can.apply')] = function(ctx, list) { return this.apply(ctx, list); };`
+@signature `@@can.apply( obj, args )`
 
-Calling this apply function will work like a normal object.
+The `can.apply` symbol points to a Function or callable object's apply function, which converts an ArrayLike of arguments into the positional parameters and calls the function with them.
 
-@signature `Example` `obj[canSymbol('can.apply')] = function(ctx, list) { return this.apply(ctx, deepAssign([], list)); };`
+@this {Function} a function or callable
+@param {Object} obj the object to call the function on as the bound element
+@param {ArrayLike} args The list of arguments to pass to the function
 
-Calling this apply function will not mutate any argument passed in, since it operates on a deep copy of the applied list.
+
+ ```
+function func(c) {
+	return c.process();
+};
+
+// Handle non-native lists or even non-list-likes being passed in
+obj[canSymbol.for('can.apply')] = function(ctx, list) {
+	list = list.serialize ? list.serialize() : list;
+	if(!list[canSymbol.for('can.isListLike')]) {
+		list = [list];
+	}
+	return Function.prototype.apply.call(this, ctx, list); 
+};
+```

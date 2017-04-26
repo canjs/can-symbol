@@ -1,7 +1,32 @@
-@property {Symbol, Function} can-symbol/symbols/onValue can.onValue
+@typedef {function(function(*))} can-symbol/symbols/onValue can.onValue
 @parent can-symbol/symbols/observe
-@description A symbol placed on a constructor to reference a function used to listen to when the object's value changes.
+@description Defines how observables can listen to the object's value changing.
 
-@signature `Example` `obj[canSymbol('can.onValue')] = function(fn) { this.addEventListener("change", fn) };`
+@signature `@@can.onValue( handler(newValue) )`
 
-Calling this function will set up a listener on the object.
+The `can.onValue` symbol points to a function that registers 
+ `handler` to be called back with the new value of the object when it
+ changes.  
+
+```
+var obj = function(value) {
+	if(arguments.length >= 1) {
+    obj.currentValue = value;
+    obj.handlers.forEach(function(handler){
+      handler.call(obj, value);
+    });
+  } else {
+  	return obj.currentValue;
+  }
+};
+
+obj[canSymbol.for(“can.onValue”)] = function(handler){
+  if(!obj.handlers) {
+    obj.handlers = [];
+  }
+  obj.handlers.push(handler);
+}
+```
+
+@this {*} any object with a mutable value
+@param {function(this:*, *)} handler(newValue) The handler must be called back with `this` as the instance of the observable. 

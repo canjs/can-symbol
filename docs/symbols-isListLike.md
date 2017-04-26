@@ -1,7 +1,7 @@
-@property {Symbol, Boolean} can-symbol/symbols/isListLike can.isListLike
+@typedef {Boolean} can-symbol/symbols/isListLike can.isListLike
 @parent can-symbol/symbols/type
-@description A symbol placed on an object to confirm that it is usable like an object with numeric indexes and length.
+@description Set to `true` on objects with numeric indexes and length.
 
-@signature `Example` `obj[canSymbol('can.isListLike')] = true`
+@signature `@@can.isListLike`
 
-Shows that this object can be used with numeric properties, like a [can-define/list/list DefineList].
+Setting the value of `can.isListLike` to `true` on an object shows that this object can be used with numeric properties, like a [can-define/list/list DefineList].

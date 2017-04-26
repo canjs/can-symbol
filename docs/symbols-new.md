@@ -1,11 +1,26 @@
-@property {Symbol, Function} can-symbol/symbols/new can.new
+@property {function(...)} can-symbol/symbols/new can.new
 @parent can-symbol/symbols/call
-@description A symbol placed on a constructor to reference a function that creates a new instance of the constructor.
+@description Create a new instance of a constructor function or prototype object.
 
-@signature `Example` `obj[canSymbol('can.new')] = function() { return new this(); };`
+@signature `@@can.new(arg, ...)`
 
-Calling this function as a constructor will construct an instance as normal, but remove any arguments.
+Pass the arguments to a construction of an object, with a prototype chain based on this constructor's prototype, or itself if not a constructor.
 
-@signature `Non-standard Example` `obj[canSymbol('can.new')] = function(params) { return Object.create(this.prototype, params); };`
+@this {*} A callable constructor or a prototype object.
+@param {*} arg pass any number of parameters of any type
+@return {Object} A new instance of the type.
 
-Calling this function as a constructor will work even if the object it is applied to is not a callable function.
+```
+function constructor() {}
+constructor.prototype = { foo: "bar" };
+
+// ES6 rest and spread params used below to be concise.
+constructor[canSymbol.for("new")] = function(...args) {
+	return new this(...args);
+};
+
+var prototype = { baz: "quux" };
+prototype[canSymbol.for("new")] = function(props) {
+	return Object.create(this, props);
+};
+```

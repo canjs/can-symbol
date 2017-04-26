@@ -1,7 +1,23 @@
-@property {Symbol, Function} can-symbol/symbols/setKeyValue can.setKeyValue
+@typedef {function(String, *)} can-symbol/symbols/setKeyValue can.setKeyValue
 @parent can-symbol/symbols/get-set
-@description A symbol placed on an object to reference a function that sets the value of one of the object's properties.  This is only applicable to objects where keyed properties are relevant (like maps);
+@description Defines a function that sets the value of one of an object's named properties.
 
-@signature `DefineMap-like Example` `obj[canSymbol('can.setKeyValue')] = function(key, val) { this[key] = val; };`
+@signature `@@can.setKeyValue( key, value )`
 
-Calling this setter function with an object will update one of the map's properties to match those of the object.
+The `can.setKeyValue` symbol points to a Map-like object's property mutator function, which updates the value of the object's property with the supplied key. This is only applicable to objects where keyed properties are relevant (like maps).
+
+```
+var map = {
+	set: function (key, value) {
+		Observation.add(this, key);
+		this[key] = value;
+	}
+}
+
+map[canSymbol.for('can.setKeyValue')] = map.set;
+```
+
+@this {Object} an object with named properties
+@param {String} key the key to set on the object
+@param {*} key the property value to set on the object
+

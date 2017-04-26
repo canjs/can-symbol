@@ -1,7 +1,19 @@
-@property {Symbol, Object} can-symbol/symbols/proto can.proto
+@typedef {Object} can-symbol/symbols/proto can.proto
 @parent can-symbol/symbols/shape
-@description A symbol placed on an object to reference its prototype.  Since the non-standard \_\_proto\_\_ is deprecated, this can serve as a prototype chain reference without invoking `Object.getOwnProperty()` every time.
+@description Defines the "proto" (first element in the prototype chain) of an object
 
-@signature `Example` `obj[canSymbol('can.proto')] = Object.getOwnProperty(obj);`
 
-This object's prototype can be accessed normally.
+@signature `@@can.proto`
+
+The `can.proto` symbol is placed on an object to reference its prototype.  Since the non-standard \_\_proto\_\_ is deprecated, this can serve as a prototype chain reference without invoking `Object.getPrototypeOf()` every time.
+
+```
+function Foo() {}
+Foo.prototype = {
+	bar: "baz"
+};
+
+var obj = new Foo();
+obj[canSymbol.for("can.proto")] = Foo.prototype;
+
+```
