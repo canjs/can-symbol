@@ -23,7 +23,7 @@
     "release:major": "npm version major && npm publish",
     "develop": "done-serve --static --develop --port 8080"
   },
-  "main": "dist/cjs/can-symbol",
+  "main": "can-symbol",
   "browser": {
     "transform": [
       "cssify"
