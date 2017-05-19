@@ -22,6 +22,17 @@ if(typeof Symbol !== "undefined") {
 
 	var descriptionToSymbol = {};
 	var symbolToDescription = {};
+
+	/**
+	 * @function can-symbol.for for
+	 * @parent  can-symbol
+	 * @description  Get a symbol based on a known string identifier, or create it if it doesn't exist.
+	 *
+	 * @signature `canSymbol.for(String)`
+	 *
+	 * @param { String } description  The string value of the symbol
+	 * @return { CanSymbol } The globally unique and consistent symbol with the given string value.
+	 */
 	CanSymbol.for = function(description){
 		var symbol = descriptionToSymbol[description];
 		if(!symbol) {
@@ -30,6 +41,16 @@ if(typeof Symbol !== "undefined") {
 		}
 		return symbol;
 	};
+	/**
+	 * @function can-symbol.keyFor keyFor
+	 * @parent  can-symbol
+	 * @description  Get the description for a symbol.
+	 *
+	 * @signature `canSymbol.keyFor(CanSymbol)`
+	 *
+	 * @param { String } description  The string value of the symbol
+	 * @return { CanSymbol } The globally unique and consistent symbol with the given string value.
+	 */
 	CanSymbol.keyFor = function(symbol) {
 		return symbolToDescription[symbol];
 	};
