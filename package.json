@@ -21,6 +21,7 @@
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
+    "release:pre": "npm version prerelease && npm publish --tag=pre",
     "document": "bit-docs",
     "develop": "done-serve --static --develop --port 8080"
   },
@@ -39,7 +40,7 @@
     "Done",
     "JS"
   ],
-  "steal": {
+  "system": {
     "main": "can-symbol",
     "configDependencies": [
       "live-reload"
