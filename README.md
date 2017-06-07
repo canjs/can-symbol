@@ -1,20 +1,20 @@
 # can-symbol
 
 
-A symbol polyfill that also includes additional well known symbols used to detail how to
+A symbol polyfill that also includes additional CanJS-specific symbols, used to detail how to
 operate on different objects.
 
-The following are the additional well-known symbols:
+The following are the additional registered CanJS symbols:
 
 - `can.apply(context, args)` - How to call this value as a function
-- `can.getKeyDependencies(key)->?` - Returns observable dependencies for the observable key, null if there are none.
-- `can.getKeyDescriptor(key)->{}` - Returns data describing this key's behavior. (PENDING)
+- `can.getKeyDependencies(key)->{}` - Returns observable dependencies for the observable key, null if there are none.
+- `can.getKeyDescriptor(key)->{}` - Returns data describing this key's behavior.
 - `can.getKeyValue(key)->*` - Returns the value at key.
 - `can.getOwnEnumerableKeys()->Array|Iterator` - Returns enumerable keys directly on object.
 - `can.getOwnKeyDescriptor(key)->{}` - Returns data describing this key's behavior directly on object.
 - `can.getOwnKeys()->Array|Iterator` - Returns all keys directly on object.
 - `can.getValue()->*` - Returns the internal value of the object.
-- `can.getValueDependencies()->?` - Returns observable dependencies for the observable value, null if there are none.
+- `can.getValueDependencies()->{}` - Returns observable dependencies for the observable value, null if there are none.
 - `can.getValueDescriptor()->{}` - Returns data describing this values behavior.
 
 
@@ -33,7 +33,7 @@ The following are the additional well-known symbols:
 - `can.onKeysAdded( callback(keyToValues[, index]) )` - Listen to when keys are added to this value.
 - `can.onKeysRemoved( callback(keysOrValues[, index]) )` - Listen to when keys are removed from this value.
 - `can.onValue(callback)` - Listen to when the value changes.
-- `can.getProto()` - Get the next object in the proto chain.  (PENDING)
+- `can.proto` - The next object in the proto chain.
 - `can.setKeyValue(key, value)` - Set a key's value.
 - `can.setValue(value)` - Update the value of this value.
 
