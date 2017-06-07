@@ -4,7 +4,8 @@
 
 @signature `@@can.setKeyValue( key, value )`
 
-The `can.setKeyValue` symbol points to a Map-like object's property mutator function, which updates the value of the object's property with the supplied key. This is only applicable to objects where keyed properties are relevant (like maps).
+The `@@@@can.setKeyValue` symbol points to a Map-like object's property mutator function, which updates the value of the 
+object's property with the supplied key. This is only applicable to objects where keyed properties are relevant (like maps).
 
 ```
 var map = {

@@ -10,7 +10,7 @@ If you don’t already have a GitHub account, you’ll need to [create a new one
 
 ### Forking & cloning the repository
 
-A “fork” is a copy of a repository in your personal GitHub account. “Cloning” is the process of getting the repository’s source code on your computer.
+A "fork" is a copy of a repository in your personal GitHub account. "Cloning" is the process of getting the repository’s source code on your computer.
 
 GitHub has a guide for [forking a repo](https://help.github.com/articles/fork-a-repo/). To fork can-symbol, you can start by going to its [fork page](https://github.com/canjs/can-symbol/fork).
 

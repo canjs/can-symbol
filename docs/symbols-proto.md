@@ -5,7 +5,7 @@
 
 @signature `@@can.proto`
 
-The `can.proto` symbol is placed on an object to reference its prototype.  Since the non-standard \_\_proto\_\_ is deprecated, this can serve as a prototype chain reference without invoking `Object.getPrototypeOf()` every time.
+The `@@@@can.proto` symbol is placed on an object to reference its prototype.  Since the non-standard `__proto__` is deprecated, this can serve as a prototype chain reference without invoking `Object.getPrototypeOf()` every time.
 
 ```
 function Foo() {}

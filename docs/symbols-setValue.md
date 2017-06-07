@@ -4,7 +4,8 @@
 
 @signature `@@can.setValue( value )`
 
-The `@@can.setValue` symbol sets the current value on the applied-to object. "Value" may mean different things in different contexts; e.g. setting a [can-compute `can-compute`]'s value updates the value stored internally to the compute, while setting an observable object's value will update all of the same-keyed properties of the object argument.
+The `@@@@can.setValue` symbol points to a function that sets the current value on the context object. "Value" may mean different
+things in different contexts; e.g. setting a [can-compute]'s value updates the value stored internally to the compute, while setting an observable object's value will update all of the same-keyed properties of the object argument.
 
 ```
 var internalValue = undefined

@@ -4,27 +4,27 @@
 
 @signature `@@can.offValue( handler(newValue) )`
 
-The `can.offValue` symbol points to a function that unregisters 
+The `@@@@can.offValue` symbol points to a function that unregisters 
  `handler` from being called when the object's value
  changes.  
 
 ```
 var obj = function(value) {
 	if(arguments.length >= 1) {
-    obj.currentValue = value;
-    obj.handlers.forEach(function(handler){
-      handler.call(obj, value);
-    });
-  } else {
-  	return obj.currentValue;
-  }
+		obj.currentValue = value;
+		obj.handlers.forEach(function(handler){
+			handler.call(obj, value);
+		});
+	} else {
+		return obj.currentValue;
+	}
 };
 
-obj[canSymbol.for(“can.offValue”)] = function(handler){
-  if(!obj.handlers) {
-    obj.handlers = [];
-  }
-  obj.handlers.splice(obj.handlers.indexOf(handler), 1);
+obj[canSymbol.for("can.offValue")] = function(handler){
+	if(!obj.handlers) {
+		obj.handlers = [];
+	}
+	obj.handlers.splice(obj.handlers.indexOf(handler), 1);
 }
 ```
 

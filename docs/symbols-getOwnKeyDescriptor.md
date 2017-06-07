@@ -6,10 +6,6 @@
 
 Return a single key's descriptor from the object, as defined by the custom behavior of this function.
 
-@this {Object} an object with named properties
-@param {String} key The string key to look up on the object
-@return {Object} a property descriptor, containing the keys `configurable`, `enumerable`, and either `value` and `writable`, or `get` and `set`, if the property exists on the object; `undefined` otherwise.
-
 
 ```
 var shapeless = {};
@@ -32,3 +28,7 @@ thingsInMyEar[canSymbol.for('can.getOwnKeyDescriptor')] = function(key) {
 };
 
 ```
+
+@this {Object} an object with named properties
+@param {String} key The string key to look up on the object
+@return {Object} a property descriptor, containing the keys `configurable`, `enumerable`, and either `value` and `writable`, or `get` and `set`, if the property exists on the object; `undefined` otherwise.

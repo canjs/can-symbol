@@ -18,7 +18,8 @@
 			"can-symbol/symbols/getValue",
 			"can-symbol/symbols/setValue",
 			"can-symbol/symbols/getKeyValue",
-			"can-symbol/symbols/setKeyValue"
+			"can-symbol/symbols/setKeyValue",
+			"can-symbol/symbols/deleteKeyValue"
 		]},
 		{"can-symbol/symbols/call": [
 			"can-symbol/symbols/apply",
