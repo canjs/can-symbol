@@ -67,6 +67,7 @@ if(typeof Symbol !== "undefined") {
 	"isMapLike",
 	"isListLike",
 	"isValueLike",
+	"isFunctionLike",
 	// ======= Shape detection =========
 	"getOwnKeys",
 	"getOwnKeyDescriptor",
