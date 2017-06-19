@@ -6,10 +6,6 @@
 
 Return all string keys on an object, including those whose corresponding properties are defined not to be enumerable.
 
-@this {Object} an object with named properties
-@return {Array} an array of Strings representing the object's string keys.
-
-
 ```
 var shapeless = {};
 
@@ -29,3 +25,7 @@ thingsInMyEar[canSymbol('can.getOwnEnumerableKeys')] = function() {
 };
 
 ```
+
+@this {Object} an object with named properties
+@return {Array} an array of Strings representing the object's string keys.
+

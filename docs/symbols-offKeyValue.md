@@ -5,26 +5,26 @@
 
 @signature `@@can.offKeyValue( key, handler(newValue) )`
 
-the `@@can.offKeyValue` symbol is placed on a Map-like object to point to a function used to stop listening to changes on the `key` property with the `handler` function.
+the `@@@@can.offKeyValue` symbol is placed on a Map-like object to point to a function used to stop listening to changes on the `key` property with the `handler` function.
 
 
 ```
 var obj = {
-  handlers: {},
-  setKeyValue: function(key, value){
-    this[key] = value;
-    var self = this;
-    obj.handlers[key].forEach(function(handler){
-      handler.call(self, value);
-    });
-  }
+	handlers: {},
+	setKeyValue: function(key, value){
+		this[key] = value;
+		var self = this;
+		obj.handlers[key].forEach(function(handler){
+			handler.call(self, value);
+		});
+	}
 };
 
-obj[canSymbol.for(“can.offKeyValue”)] = function(key, handler){
-  if(!obj.handlers[key]) {
-    obj.handlers[key] = [];
-  }
-  obj.handlers[key].splice(obj.handlers[key].indexOf(handler), 1);
+obj[canSymbol.for("can.offKeyValue")] = function(key, handler){
+	if(!obj.handlers[key]) {
+		obj.handlers[key] = [];
+	}
+	obj.handlers[key].splice(obj.handlers[key].indexOf(handler), 1);
 }
 ```
 

@@ -4,27 +4,27 @@
 
 @signature `@@can.onValue( handler(newValue) )`
 
-The `can.onValue` symbol points to a function that registers 
+The `@@@@can.onValue` symbol points to a function that registers 
  `handler` to be called back with the new value of the object when it
  changes.  
 
 ```
 var obj = function(value) {
 	if(arguments.length >= 1) {
-    obj.currentValue = value;
-    obj.handlers.forEach(function(handler){
-      handler.call(obj, value);
-    });
-  } else {
-  	return obj.currentValue;
-  }
+		obj.currentValue = value;
+		obj.handlers.forEach(function(handler){
+			handler.call(obj, value);
+		});
+	} else {
+		return obj.currentValue;
+	}
 };
 
-obj[canSymbol.for(“can.onValue”)] = function(handler){
-  if(!obj.handlers) {
-    obj.handlers = [];
-  }
-  obj.handlers.push(handler);
+obj[canSymbol.for("can.onValue")] = function(handler){
+	if(!obj.handlers) {
+		obj.handlers = [];
+	}
+	obj.handlers.push(handler);
 }
 ```
 

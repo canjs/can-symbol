@@ -4,7 +4,7 @@
 
 @signature `@@can.hasOwnKey(key)`
 
-The `can.hasOwnKey` symbol points to a function on an object that, given a String key, determines whether the key is a member of the object's own key set (not that of the prototype chain).
+The `@@@@can.hasOwnKey` symbol points to a function on an object that, given a String key, determines whether the key is a member of the object's own key set (not that of the prototype chain).
 
 ```
 var shapeless = {};
