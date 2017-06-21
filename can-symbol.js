@@ -1,5 +1,5 @@
 var CanSymbol;
-if(typeof Symbol !== "undefined") {
+if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	CanSymbol = Symbol;
 } else {
 
