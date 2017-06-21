@@ -1,3 +1,5 @@
+var namespace = require("can-namespace");
+
 var CanSymbol;
 if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	CanSymbol = Symbol;
@@ -100,6 +102,4 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	CanSymbol.for("can."+name);
 });
 
-
-
-module.exports = CanSymbol;
+module.exports = namespace.Symbol = CanSymbol;

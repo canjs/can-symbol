@@ -68,5 +68,8 @@
       "apis": "./docs/apis.json"
     },
     "parent": "can-symbol"
+  },
+  "dependencies": {
+    "can-namespace": "^1.0.0"
   }
 }
