@@ -1,5 +1,6 @@
 @page can-symbol
 @parent can-infrastructure
+@package ./package.json
 @group can-symbol/symbols/type Type Symbols
 @group can-symbol/symbols/shape Shape Symbols
 @group can-symbol/symbols/get-set Get/Set Symbols
