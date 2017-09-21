@@ -78,11 +78,13 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	//optional
 	"getOwnEnumerableKeys",
 	"hasOwnKey",
+	"size",
 	// ======= GET / SET
 	"getValue",
 	"setValue",
 	"getKeyValue",
 	"setKeyValue",
+	"updateValues",
 	// ======= Call =========
 	"apply",
 	"new",

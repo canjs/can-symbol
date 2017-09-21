@@ -1,4 +1,4 @@
-@typedef {function(*)} can-symbol/symbols/setValue can.setValue
+@typedef {function()} can-symbol/symbols/setValue can.setValue
 @parent can-symbol/symbols/get-set
 @description Define a function that sets the object's value.  
 
@@ -18,7 +18,7 @@ export var foo = function(val) {
 };
 
 // Get the internal value as the representative value
-foo[canSymbol.for('can.setValue')] = function(value) { 
+foo[canSymbol.for('can.setValue')] = function(value) {
 	internalValue = value;
 }
 
