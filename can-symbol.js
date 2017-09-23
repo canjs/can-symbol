@@ -79,12 +79,19 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	"getOwnEnumerableKeys",
 	"hasOwnKey",
 	"size",
+
+    // shap manipulation
+	"assignDeep",
+	"updateDeep",
+
 	// ======= GET / SET
 	"getValue",
 	"setValue",
 	"getKeyValue",
 	"setKeyValue",
 	"updateValues",
+	"addValue",
+	"removeValues",
 	// ======= Call =========
 	"apply",
 	"new",
