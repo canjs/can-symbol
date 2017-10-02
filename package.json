@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "bit-docs": "0.0.7",
-    "detect-cyclic-packages": "^1.0.0",
+    "detect-cyclic-packages": "^1.0.1",
     "done-serve": "^1.0.0-alpha.0",
     "donejs-cli": "^1.0.0-alpha.2",
     "generator-donejs": "^1.0.0-alpha.0",
