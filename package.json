@@ -16,13 +16,14 @@
     "preversion": "npm test",
     "postpublish": "git push --tags && git push",
     "testee": "testee test.html --browsers firefox",
-    "test": "npm run jshint && npm run testee",
+    "test": "npm run detect-cycle && npm run jshint && npm run testee",
     "jshint": "jshint ./*.js --config",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
     "release:pre": "npm version prerelease && npm publish --tag=pre",
-    "develop": "done-serve --static --develop --port 8080"
+    "develop": "done-serve --static --develop --port 8080",
+    "detect-cycle": "detect-cyclic-packages --ignore done-serve"
   },
   "main": "can-symbol",
   "keywords": [
@@ -43,14 +44,15 @@
   },
   "devDependencies": {
     "bit-docs": "0.0.7",
+    "detect-cyclic-packages": "^1.1.0",
+    "done-serve": "^1.0.0-alpha.0",
+    "donejs-cli": "^1.0.0-alpha.2",
+    "generator-donejs": "^1.0.0-alpha.0",
     "jshint": "^2.9.1",
     "steal": "^1.0.5",
     "steal-qunit": "^1.0.0",
     "steal-tools": "^1.0.1",
-    "testee": "^0.3.0",
-    "generator-donejs": "^1.0.0-alpha.0",
-    "donejs-cli": "^1.0.0-alpha.2",
-    "done-serve": "^1.0.0-alpha.0"
+    "testee": "^0.3.0"
   },
   "dependencies": {
     "can-namespace": "^1.0.0"
