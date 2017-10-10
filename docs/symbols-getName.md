@@ -1,5 +1,5 @@
 @typedef {Boolean} can-symbol/symbols/getName can.getName
-@parent can-symbol/symbols/get-set
+@parent can-symbol/symbols/shape
 
 @description Returns a human-readable name of an object
 
