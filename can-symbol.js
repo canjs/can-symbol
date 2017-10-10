@@ -79,8 +79,9 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	"getOwnEnumerableKeys",
 	"hasOwnKey",
 	"size",
+	"getName",
 
-    // shap manipulation
+	// shape manipulation
 	"assignDeep",
 	"updateDeep",
 
