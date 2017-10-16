@@ -11,7 +11,7 @@ The `@@@@can.getName` symbol points to a function that returns human-readable na
 ```js
 var foo = function() {};
 
-foo[canSymbol.for('can.getName')]: function() {
+foo[canSymbol.for('can.getName')] = function() {
 	return "MyFooFunction";
 };
 
