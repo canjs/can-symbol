@@ -1,5 +1,6 @@
 @typedef {Boolean} can-symbol/symbols/getIdentity can.getIdentity
 @parent can-symbol/symbols/shape
+@hide
 
 @description Returns a name/label that identifies the object
 
