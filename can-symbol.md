@@ -1,5 +1,6 @@
 @page can-symbol
-@parent can-infrastructure
+@parent can-polyfills
+@collection can-infrastructure
 @package ./package.json
 @group can-symbol/symbols/type Type Symbols
 @group can-symbol/symbols/shape Shape Symbols
