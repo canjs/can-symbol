@@ -103,12 +103,14 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	"offKeyValue",
 	"getKeyDependencies",
 	"getValueDependencies",
+	"getWhatIChange",
+	"getChangesDependencyRecord",
 	"keyHasDependencies",
 	"valueHasDependencies",
 	"onKeys",
 	"onKeysAdded",
 	"onKeysRemoved"
-	].forEach(function(name){
+].forEach(function(name){
 	CanSymbol.for("can."+name);
 });
 
