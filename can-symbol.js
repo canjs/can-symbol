@@ -73,13 +73,13 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	// ======= Shape detection =========
 	"getOwnKeys",
 	"getOwnKeyDescriptor",
-	// "getValueDescriptor",
 	"proto",
-	//optional
+	// optional
 	"getOwnEnumerableKeys",
 	"hasOwnKey",
 	"size",
 	"getName",
+	"getIdentity",
 
 	// shape manipulation
 	"assignDeep",
