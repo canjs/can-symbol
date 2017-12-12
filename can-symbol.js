@@ -27,7 +27,7 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 
 	/**
 	 * @function can-symbol.for for
-	 * @parent  can-symbol
+	 * @parent  can-symbol/methods
 	 * @description  Get a symbol based on a known string identifier, or create it if it doesn't exist.
 	 *
 	 * @signature `canSymbol.for(String)`

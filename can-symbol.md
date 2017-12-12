@@ -2,12 +2,13 @@
 @parent can-polyfills
 @collection can-infrastructure
 @package ./package.json
-@group can-symbol/symbols/type Type Symbols
-@group can-symbol/symbols/shape Shape Symbols
-@group can-symbol/symbols/get-set Get/Set Symbols
-@group can-symbol/symbols/call Call Symbols
-@group can-symbol/symbols/observe Observe Symbols
-@group can-symbol/types Types
+@group can-symbol/methods 0 Methods
+@group can-symbol/symbols/type 1 Type Symbols
+@group can-symbol/symbols/get-set 2 Get/Set Symbols
+@group can-symbol/symbols/shape 3 Shape Symbols
+@group can-symbol/symbols/call 4 Call Symbols
+@group can-symbol/symbols/observe 5 Observe Symbols
+@group can-symbol/types 6 Types
 @description Symbols used to detail how CanJS may operate on different objects
 
 CanJS has a consistent internal interface for objects to interact with each other, and this is also important for interop
