@@ -59,7 +59,7 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	["hasInstance","isConcatSpreadable",
 		"iterator","match","prototype","replace","search","species","split",
 	"toPrimitive","toStringTag","unscopables"].forEach(function(name){
-		CanSymbol[name] = CanSymbol.for(name);
+		CanSymbol[name] = CanSymbol("Symbol."+name);
 	});
 }
 
@@ -107,7 +107,8 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	"valueHasDependencies",
 	"onKeys",
 	"onKeysAdded",
-	"onKeysRemoved"
+	"onKeysRemoved",
+	"onPatches"
 	].forEach(function(name){
 	CanSymbol.for("can."+name);
 });

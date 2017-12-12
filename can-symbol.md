@@ -6,6 +6,7 @@
 @group can-symbol/symbols/get-set Get/Set Symbols
 @group can-symbol/symbols/call Call Symbols
 @group can-symbol/symbols/observe Observe Symbols
+@group can-symbol/types Types
 @description Symbols used to detail how CanJS may operate on different objects
 
 CanJS has a consistent internal interface for objects to interact with each other, and this is also important for interop
