@@ -77,6 +77,7 @@ if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
 	// optional
 	"getOwnEnumerableKeys",
 	"hasOwnKey",
+	"hasKey",
 	"size",
 	"getName",
 	"getIdentity",
