@@ -8,7 +8,7 @@
 
 `add` patches signal that a key was added to an object.
 
-```javascript
+```js
 {type: "add", key: "b", value: 1}
 ```
 
@@ -19,7 +19,7 @@
 
 `delete` patches signal that a key was deleted from an object.
 
-```javascript
+```js
 {type: "delete", key: "a"}
 ```
 
@@ -29,7 +29,7 @@
 
 `set` patches signal that an existing key's value was set to another value.
 
-```javascript
+```js
 {type: "set", key: "c", value: 2}
 ```
 
@@ -41,7 +41,7 @@
 `splice` patches signal a list-like object had enumerable values added, removed
 or both at a specific index.
 
-```javascript
+```js
 {type: "splice", index: 0, deleteCount: 10, insert: [item1, item2]}
 ````
 
@@ -54,7 +54,7 @@ or both at a specific index.
 `move` patches signal a list-like object had an enumerable value move from one
 position to another.
 
-```javascript
+```js
 {type: "move",   fromIndex: 1, toIndex: 2}
 ```
 
@@ -66,7 +66,7 @@ position to another.
 `values` patches signal a container-like object (like `Set`) has
 had items added or removed.
 
-```javascript
+```js
 {type: "values", delete: [item0], insert: [item1, item2]}
 ```
 

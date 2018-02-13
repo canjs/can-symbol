@@ -13,7 +13,7 @@ uses the value of `@@can.getIdentity` (if set) to decorate its output.
 
 E.g:
 
-```javascript
+```js
 const obj = {};
 import canReflect from "can-reflect";
 
@@ -21,7 +21,7 @@ import canReflect from "can-reflect";
 canReflect.getName(obj); // -> Object<>
 
 foo[canSymbol.for("can.getIdentity")] = function() {
-  return "15";
+	return "15";
 };
 
 obj[canSymbol.for("can.getIdentity")](); //-> "15"
