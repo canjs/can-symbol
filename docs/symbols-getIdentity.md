@@ -13,15 +13,15 @@ uses the value of `@@can.getIdentity` (if set) to decorate its output.
 
 E.g:
 
-```js
-var obj = {};
-var canReflect = require("can-reflect");
+```javascript
+const obj = {};
+import canReflect from "can-reflect";
 
 // without setting `can.getIdentity`
 canReflect.getName(obj); // -> Object<>
 
 foo[canSymbol.for("can.getIdentity")] = function() {
-	return "15";
+  return "15";
 };
 
 obj[canSymbol.for("can.getIdentity")](); //-> "15"

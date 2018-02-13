@@ -8,8 +8,8 @@
 The `@@@@can.size` symbol points to a function that returns the number of
 items in the collection.
 
-```js
-var obj = {
+```javascript
+const obj = {
     [canSymbol.for('can.size')]: function(){
         return Object.keys(this).length;
     }

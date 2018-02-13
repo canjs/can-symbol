@@ -11,8 +11,8 @@ on the client.
 The following mutations on a list-like object will
 produce the patch objects in the comments:
 
-```js
-var list = [];
+```javascript
+const list = [];
 
 list.count = 3000 //-> {type: "add", key: "count", 3000}
 
