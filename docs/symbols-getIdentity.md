@@ -18,14 +18,14 @@ const obj = {};
 import canReflect from "can-reflect";
 
 // without setting `can.getIdentity`
-canReflect.getName(obj); // -> Object<>
+canReflect.getName( obj ); // -> Object<>
 
-foo[canSymbol.for("can.getIdentity")] = function() {
+foo[ canSymbol.for( "can.getIdentity" ) ] = function() {
 	return "15";
 };
 
-obj[canSymbol.for("can.getIdentity")](); //-> "15"
-canReflect.getName(obj); // -> Object<15>
+obj[ canSymbol.for( "can.getIdentity" ) ](); //-> "15"
+canReflect.getName( obj ); // -> Object<15>
 ```
 
 @return {String} The name/label that identifies the object 
