@@ -9,13 +9,13 @@ The `@@@@can.getName` symbol points to a function that returns human-readable na
 
 
 ```js
-var foo = function() {};
+const foo = function() {};
 
-foo[canSymbol.for('can.getName')] = function() {
+foo[ canSymbol.for( "can.getName" ) ] = function() {
 	return "MyFooFunction";
 };
 
-obj[canSymbol.for('can.getName')]() //-> "MyFooFunction"
+obj[ canSymbol.for( "can.getName" ) ](); //-> "MyFooFunction"
 ```
 
 @return {String} The name of the object/function

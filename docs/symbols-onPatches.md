@@ -12,11 +12,11 @@ The following mutations on a list-like object will
 produce the patch objects in the comments:
 
 ```js
-var list = [];
+const list = [];
 
-list.count = 3000 //-> {type: "add", key: "count", 3000}
+list.count = 3000; //-> {type: "add", key: "count", 3000}
 
-list.push("a") //-> {type: "splice", index: 0, insert: ["a"]}
+list.push( "a" ); //-> {type: "splice", index: 0, insert: ["a"]}
 ```
 
 @this {Object} Any Map-like object with named properties.

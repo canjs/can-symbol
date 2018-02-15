@@ -9,7 +9,7 @@
 `add` patches signal that a key was added to an object.
 
 ```js
-{type: "add", key: "b", value: 1}
+{ type: "add", key: "b", value: 1 }
 ```
 
 @param {String} key The name of the key that was added to the object.
@@ -20,7 +20,7 @@
 `delete` patches signal that a key was deleted from an object.
 
 ```js
-{type: "delete", key: "a"}
+{ type: "delete", key: "a" }
 ```
 
 @param {String} key The name of the key that was deleted from the object.
@@ -30,7 +30,7 @@
 `set` patches signal that an existing key's value was set to another value.
 
 ```js
-{type: "set", key: "c", value: 2}
+{ type: "set", key: "c", value: 2 }
 ```
 
 @param {String} key The name of the key that was update on the object.
@@ -42,7 +42,7 @@
 or both at a specific index.
 
 ```js
-{type: "splice", index: 0, deleteCount: 10, insert: [item1, item2]}
+{ type: "splice", index: 0, deleteCount: 10, insert: [ item1, item2 ] }
 ````
 
 @param {Number} index The index where values were added, removed, or both.
@@ -55,7 +55,7 @@ or both at a specific index.
 position to another.
 
 ```js
-{type: "move",   fromIndex: 1, toIndex: 2}
+{ type: "move",   fromIndex: 1, toIndex: 2 }
 ```
 
 @param {Number} fromIndex The starting index of the value.
@@ -67,7 +67,7 @@ position to another.
 had items added or removed.
 
 ```js
-{type: "values", delete: [item0], insert: [item1, item2]}
+{ type: "values", delete: [ item0 ], insert: [ item1, item2 ] }
 ```
 
 @param {Array<Any>} [delete] The items added to the object.
