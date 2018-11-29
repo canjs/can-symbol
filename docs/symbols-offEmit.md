@@ -8,8 +8,8 @@ The `@@@@can.offEmit` symbol points to a function that unregisters
  `handler` from being called when the object's value
  is emitted.  
 
-```
-var obj = function(value) {
+```js
+const obj = function(value) {
 	if(arguments.length >= 1) {
 		obj.currentValue = value;
 		obj.handlers.forEach(function(handler){

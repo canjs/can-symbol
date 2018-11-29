@@ -6,10 +6,10 @@
 
 The `@@@@can.onEmit` symbol points to a function that registers 
  `handler` to be called back with the new value of the object when it
- is emitted.  
+ is emitted. `@@@@can.onEmit` can be used when you wish to emit a value that isn't changing.
 
-```
-var obj = function(value) {
+```js
+const obj = function(value) {
 	if(arguments.length >= 1) {
 		obj.currentValue = value;
 		obj.handlers.forEach(function(handler){
@@ -26,6 +26,15 @@ obj[canSymbol.for("can.onEmit")] = function(handler){
 	}
 	obj.handlers.push(handler);
 }
+
+const listener = function (value) {
+	console.log('emitted', value);
+}
+
+obj[canSymbol.for("can.onEmit")](listener);
+
+obj(5); // -> output: "emitted 5"
+obj(5); // -> output: "emitted 5"
 ```
 
 @this {*} any object with a mutable value
