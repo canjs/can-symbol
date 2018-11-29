@@ -26,6 +26,8 @@
 			"can-symbol/symbols/new"
 		]},
 		{"can-symbol/symbols/observe": [
+			"can-symbol/symbols/onEmit",
+			"can-symbol/symbols/offEmit",
 			"can-symbol/symbols/onValue",
 			"can-symbol/symbols/offValue",
 			"can-symbol/symbols/onKeyValue",
