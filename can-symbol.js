@@ -1,8 +1,19 @@
 "use strict";
 var namespace = require("can-namespace");
 
+var supportsNativeSymbols = (function() {
+	var symbolExists = typeof Symbol !== "undefined" && typeof Symbol.for === "function";
+
+	if (!symbolExists) {
+		return false;
+	}
+
+	var symbol = Symbol("a symbol for testing symbols");
+	return typeof symbol === "symbol";
+}());
+
 var CanSymbol;
-if(typeof Symbol !== "undefined" && typeof Symbol.for === "function") {
+if(supportsNativeSymbols) {
 	CanSymbol = Symbol;
 } else {
 
