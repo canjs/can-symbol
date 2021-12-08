@@ -82,6 +82,7 @@ if(supportsNativeSymbols) {
 	"isListLike",
 	"isValueLike",
 	"isFunctionLike",
+	"isScopeLike",
 	// ======= Shape detection =========
 	"getOwnKeys",
 	"getOwnKeyDescriptor",
